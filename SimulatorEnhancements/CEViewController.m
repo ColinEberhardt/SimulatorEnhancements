@@ -7,23 +7,30 @@
 //
 
 #import "CEViewController.h"
+#import <CoreLocation/CoreLocation.h>
+#import "CELocationEnhancements.h"
 
-@interface CEViewController ()
+@interface CEViewController () <CLLocationManagerDelegate>
 
 @end
 
-@implementation CEViewController
+@implementation CEViewController {
+  CLLocationManager *_locationManager;
+}
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  [super viewDidLoad];
+  
+  _locationManager = [CLLocationManager new];
+  _locationManager.delegate = self;
+  [_locationManager startUpdatingLocation];
+  
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+  
 }
 
 @end
