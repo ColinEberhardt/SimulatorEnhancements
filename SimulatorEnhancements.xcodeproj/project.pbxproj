@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7224AD4318B3BA7C006F0138 /* CELocationEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD4218B3BA7C006F0138 /* CELocationEnhancements.m */; };
+		7224AD4918B3BAB7006F0138 /* NSDictionary+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD4818B3BAB7006F0138 /* NSDictionary+Helpers.m */; };
 		729EC01F18B14E3900BBED63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729EC01E18B14E3900BBED63 /* Foundation.framework */; };
 		729EC02118B14E3900BBED63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729EC02018B14E3900BBED63 /* CoreGraphics.framework */; };
 		729EC02318B14E3900BBED63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729EC02218B14E3900BBED63 /* UIKit.framework */; };
@@ -23,9 +25,7 @@
 		729EC04A18B14E3900BBED63 /* SimulatorEnhancementsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 729EC04918B14E3900BBED63 /* SimulatorEnhancementsTests.m */; };
 		729EC05418B14E5300BBED63 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729EC05318B14E5300BBED63 /* CoreLocation.framework */; };
 		729EC05B18B14F6100BBED63 /* CESimulatorEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 729EC05A18B14F6100BBED63 /* CESimulatorEnhancements.m */; };
-		729EC05E18B14FF400BBED63 /* CELocationEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 729EC05D18B14FF400BBED63 /* CELocationEnhancements.m */; };
 		729EC06118B1514100BBED63 /* CLLocationManager+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 729EC06018B1514100BBED63 /* CLLocationManager+Enhancements.m */; };
-		729EC06718B157B200BBED63 /* NSDictionary+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 729EC06618B157B200BBED63 /* NSDictionary+Helpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7224AD4118B3BA7C006F0138 /* CELocationEnhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CELocationEnhancements.h; path = Extensions/Location/CELocationEnhancements.h; sourceTree = "<group>"; };
+		7224AD4218B3BA7C006F0138 /* CELocationEnhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CELocationEnhancements.m; path = Extensions/Location/CELocationEnhancements.m; sourceTree = "<group>"; };
+		7224AD4718B3BAB7006F0138 /* NSDictionary+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Helpers.h"; path = "Extensions/NSDictionary+Helpers.h"; sourceTree = "<group>"; };
+		7224AD4818B3BAB7006F0138 /* NSDictionary+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Helpers.m"; path = "Extensions/NSDictionary+Helpers.m"; sourceTree = "<group>"; };
 		729EC01B18B14E3900BBED63 /* SimulatorEnhancements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorEnhancements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729EC01E18B14E3900BBED63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		729EC02018B14E3900BBED63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,12 +65,8 @@
 		729EC05318B14E5300BBED63 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		729EC05918B14F6100BBED63 /* CESimulatorEnhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CESimulatorEnhancements.h; path = Extensions/CESimulatorEnhancements.h; sourceTree = "<group>"; };
 		729EC05A18B14F6100BBED63 /* CESimulatorEnhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CESimulatorEnhancements.m; path = Extensions/CESimulatorEnhancements.m; sourceTree = "<group>"; };
-		729EC05C18B14FF400BBED63 /* CELocationEnhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CELocationEnhancements.h; sourceTree = "<group>"; };
-		729EC05D18B14FF400BBED63 /* CELocationEnhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CELocationEnhancements.m; sourceTree = "<group>"; };
 		729EC05F18B1514100BBED63 /* CLLocationManager+Enhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+Enhancements.h"; path = "Extensions/Location/CLLocationManager+Enhancements.h"; sourceTree = "<group>"; };
 		729EC06018B1514100BBED63 /* CLLocationManager+Enhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+Enhancements.m"; path = "Extensions/Location/CLLocationManager+Enhancements.m"; sourceTree = "<group>"; };
-		729EC06518B157B200BBED63 /* NSDictionary+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Helpers.h"; sourceTree = "<group>"; };
-		729EC06618B157B200BBED63 /* NSDictionary+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Helpers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,11 +172,11 @@
 		729EC05718B14F0500BBED63 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7224AD4718B3BAB7006F0138 /* NSDictionary+Helpers.h */,
+				7224AD4818B3BAB7006F0138 /* NSDictionary+Helpers.m */,
 				729EC05818B14F0A00BBED63 /* Location */,
 				729EC05918B14F6100BBED63 /* CESimulatorEnhancements.h */,
 				729EC05A18B14F6100BBED63 /* CESimulatorEnhancements.m */,
-				729EC06518B157B200BBED63 /* NSDictionary+Helpers.h */,
-				729EC06618B157B200BBED63 /* NSDictionary+Helpers.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -184,8 +184,8 @@
 		729EC05818B14F0A00BBED63 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				729EC05C18B14FF400BBED63 /* CELocationEnhancements.h */,
-				729EC05D18B14FF400BBED63 /* CELocationEnhancements.m */,
+				7224AD4118B3BA7C006F0138 /* CELocationEnhancements.h */,
+				7224AD4218B3BA7C006F0138 /* CELocationEnhancements.m */,
 				729EC05F18B1514100BBED63 /* CLLocationManager+Enhancements.h */,
 				729EC06018B1514100BBED63 /* CLLocationManager+Enhancements.m */,
 			);
@@ -294,9 +294,9 @@
 				729EC05B18B14F6100BBED63 /* CESimulatorEnhancements.m in Sources */,
 				729EC06118B1514100BBED63 /* CLLocationManager+Enhancements.m in Sources */,
 				729EC02B18B14E3900BBED63 /* main.m in Sources */,
-				729EC05E18B14FF400BBED63 /* CELocationEnhancements.m in Sources */,
-				729EC06718B157B200BBED63 /* NSDictionary+Helpers.m in Sources */,
 				729EC03518B14E3900BBED63 /* CEViewController.m in Sources */,
+				7224AD4918B3BAB7006F0138 /* NSDictionary+Helpers.m in Sources */,
+				7224AD4318B3BA7C006F0138 /* CELocationEnhancements.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +505,7 @@
 				729EC04F18B14E3900BBED63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		729EC05018B14E3900BBED63 /* Build configuration list for PBXNativeTarget "SimulatorEnhancementsTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +514,7 @@
 				729EC05218B14E3900BBED63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

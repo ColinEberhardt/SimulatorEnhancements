@@ -6,11 +6,14 @@
 //  Copyright (c) 2014 Colin Eberhardt. All rights reserved.
 //
 
-#import <objc/runtime.h>
 #import "CLLocationManager+Enhancements.h"
 #import "CELocationEnhancements.h"
 
 @implementation CLLocationManager (Enhancements)
+
+- (void)override_onClientEventLocation:(id)foo {
+  
+}
 
 -(void)override_setDelegate:(id<CLLocationManagerDelegate>)delegate {
   [[CELocationEnhancements instance] addLocationManager:self];

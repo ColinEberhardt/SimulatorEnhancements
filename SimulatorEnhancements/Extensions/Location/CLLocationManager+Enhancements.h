@@ -8,11 +8,8 @@
 
 #import <CoreLocation/CoreLocation.h>
 
-@class CEDelegateMultiplexer;
 
 @interface CLLocationManager (Enhancements)
 
-// gets a proxy which is used to send delegate methods invocations to multiple delegates
-- (CEDelegateMultiplexer*) getDelegateProxy;
 
 @end

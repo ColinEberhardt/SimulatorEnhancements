@@ -14,6 +14,8 @@
 
 - (void)receiveSimulatorData:(NSString *)data;
 
+- (void)startClient;
+
 + (CESimulatorEnhancements *)instance;
 
 @end
