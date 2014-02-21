@@ -14,7 +14,7 @@
 
 @implementation CMMotionManager (Enhancements)
 
-- (void)sendAccelerometerUpdate:(CMAccelerometerData *)accelerometerData {
+- (void)simx_accelerometerUpdate:(CMAccelerometerData *)accelerometerData {
   CMAccelerometerHandler handler = objc_getAssociatedObject(self, HANDLER_IDENTIFIER);
   handler(accelerometerData, nil);
 }

@@ -11,14 +11,11 @@
 
 @interface CEMotionEnhancements : NSObject
 
-
 - (void)enable;
 
 - (void)receiveSimulatorData:(NSArray *)data;
 
 - (void)addMotionManager:(CMMotionManager *)manager;
-
-- (CMMotionManager *)getIt;
 
 + (CEMotionEnhancements *)instance;
 

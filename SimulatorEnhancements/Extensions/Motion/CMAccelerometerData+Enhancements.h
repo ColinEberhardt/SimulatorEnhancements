@@ -8,8 +8,15 @@
 
 #import <CoreMotion/CoreMotion.h>
 
+/**
+ A category on CMAccelerometerData that modifies its behaviour via swizzled methods.
+ */
 @interface CMAccelerometerData (Enhancements)
 
+/**
+ The acceleration property of CMAccelerometerData is immutable. This method allows this
+ property to be set.
+ */
 - (void) dummySetAcceleration:(CMAcceleration)acceleration;
 
 @end

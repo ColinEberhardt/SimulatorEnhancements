@@ -14,7 +14,7 @@
 #import "CESwizzleUtils.h"
 
 @implementation CELocationEnhancements {
-  CLLocationManager *_locationManager;
+  NSMutableArray *_locationManagers;
 }
 
 - (void)enable {
@@ -32,24 +32,13 @@
     [locations addObject:location];
   }
   
-  [self didUpdateLocations:locations];
-  
+  for (CLLocationManager *locationManager in _locationManagers) {
+    [locationManager simx_didUpdateLocations:locations];
+  }
 }
 
 - (void)addLocationManager:(CLLocationManager *)manager {
-  _locationManager = manager;
-}
-
-- (void)didUpdateLocations:(NSArray *)locations {
-  id delegate = _locationManager.delegate;
-  
-  if ([delegate respondsToSelector:@selector(locationManager:didUpdateLocations:)]) {
-    [_locationManager.delegate locationManager:_locationManager didUpdateLocations:locations];
-  }
-  
-  if ([delegate respondsToSelector:@selector(locationManager:didUpdateToLocation:fromLocation:)]) {
-    [_locationManager.delegate locationManager:_locationManager didUpdateToLocation:locations.lastObject fromLocation:nil];
-  }
+  [_locationManagers addObject:manager];
 }
 
 + (CELocationEnhancements *)instance {

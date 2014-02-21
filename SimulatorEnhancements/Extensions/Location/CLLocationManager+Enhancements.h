@@ -9,7 +9,14 @@
 #import <CoreLocation/CoreLocation.h>
 
 
+/**
+ A category on CLLocatioManager that modifies its behaviour via swizzled methods.
+ */
 @interface CLLocationManager (Enhancements)
 
+/**
+ Send the didUpdateLocations: message to the delegate
+ */
+- (void)simx_didUpdateLocations:(NSArray *)locations;
 
 @end

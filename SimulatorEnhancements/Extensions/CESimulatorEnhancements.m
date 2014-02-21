@@ -20,6 +20,32 @@
   [[CEMotionEnhancements instance] enable];
 }
 
+- (void)receiveSimulatorData:(NSString *)data {
+  NSData* resultData = [data dataUsingEncoding:NSUTF8StringEncoding];
+  NSError* error = [NSError new];
+  NSDictionary* json = [NSJSONSerialization JSONObjectWithData:resultData
+                                                       options:kNilOptions
+                                                         error:&error];
+  
+  if ([json objectForKey:@"locations"]) {
+    [[CELocationEnhancements instance] receiveSimulatorData:json[@"locations"]];
+  }
+  if ([json objectForKey:@"accelerometer"]) {
+    [[CEMotionEnhancements instance] receiveSimulatorData:json[@"accelerometer"]];
+  }
+}
+
++ (CESimulatorEnhancements *)instance {
+  static CESimulatorEnhancements *instance = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    instance = [CESimulatorEnhancements new];
+  });
+  return instance;
+}
+
+#pragma mark - client code
+
 - (void)startClient {
   _timer = [NSTimer scheduledTimerWithTimeInterval:0.1
                                             target:self
@@ -55,28 +81,5 @@
   [self receiveSimulatorData:resultString];
 }
 
-- (void)receiveSimulatorData:(NSString *)data {
-  NSData* resultData = [data dataUsingEncoding:NSUTF8StringEncoding];
-  NSError* error = [NSError new];
-  NSDictionary* json = [NSJSONSerialization JSONObjectWithData:resultData
-                                                       options:kNilOptions
-                                                         error:&error];
-  
-  if ([json objectForKey:@"locations"]) {
-    [[CELocationEnhancements instance] receiveSimulatorData:json[@"locations"]];
-  }
-  if ([json objectForKey:@"accelerometer"]) {
-    [[CEMotionEnhancements instance] receiveSimulatorData:json[@"accelerometer"]];
-  }
-}
-
-+ (CESimulatorEnhancements *)instance {
-  static CESimulatorEnhancements *instance = nil;
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    instance = [CESimulatorEnhancements new];
-  });
-  return instance;
-}
 
 @end

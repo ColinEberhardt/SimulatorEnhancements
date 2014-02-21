@@ -12,12 +12,25 @@
 @implementation CLLocationManager (Enhancements)
 
 - (void)override_onClientEventLocation:(id)foo {
-  
+  // no-op - this suppresses location change events that are raised
+  // by CLLocationManager
 }
 
 -(void)override_setDelegate:(id<CLLocationManagerDelegate>)delegate {
   [[CELocationEnhancements instance] addLocationManager:self];
   [self override_setDelegate:delegate];
+}
+
+- (void)simx_didUpdateLocations:(NSArray *)locations {
+  id delegate = self.delegate;
+  
+  if ([delegate respondsToSelector:@selector(locationManager:didUpdateLocations:)]) {
+    [delegate locationManager:self didUpdateLocations:locations];
+  }
+  
+  if ([delegate respondsToSelector:@selector(locationManager:didUpdateToLocation:fromLocation:)]) {
+    [delegate locationManager:self didUpdateToLocation:locations.lastObject fromLocation:nil];
+  }
 }
 
 @end

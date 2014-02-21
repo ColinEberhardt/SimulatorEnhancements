@@ -13,7 +13,7 @@
 #import "CMAccelerometerData+Enhancements.h"
 
 @implementation CEMotionEnhancements {
-  CMMotionManager *_manager;
+  NSMutableArray *_motionManagers;
 }
 
 - (void)receiveSimulatorData:(NSDictionary *)jsonData {
@@ -25,7 +25,9 @@
   CMAccelerometerData *data = [[CMAccelerometerData alloc] init];
   [data dummySetAcceleration:acc];
   
-  [_manager sendAccelerometerUpdate:data];
+  for (CMMotionManager *motionManager in _motionManagers) {
+    [motionManager simx_accelerometerUpdate:data];
+  }
 }
 
 - (void)enable {
@@ -37,11 +39,7 @@
 }
 
 - (void)addMotionManager:(CMMotionManager *)manager {
-  _manager = manager;
-}
-
-- (CMMotionManager *)getIt {
-  return  _manager;
+  [_motionManagers addObject:manager];
 }
 
 + (CEMotionEnhancements *)instance {

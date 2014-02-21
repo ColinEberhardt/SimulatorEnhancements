@@ -8,9 +8,14 @@
 
 #import <CoreMotion/CoreMotion.h>
 
+/**
+ A category on CMMotionManager that modifies its behaviour via swizzled methods.
+ */
 @interface CMMotionManager (Enhancements)
 
-- (void)sendAccelerometerUpdate:(CMAccelerometerData *)accelerometerData;
-
+/**
+ Updates the current accelerometer reading.
+ */
+- (void)simx_accelerometerUpdate:(CMAccelerometerData *)accelerometerData;
 
 @end
