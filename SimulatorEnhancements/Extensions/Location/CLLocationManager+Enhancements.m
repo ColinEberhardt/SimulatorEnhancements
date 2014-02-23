@@ -17,7 +17,7 @@
 }
 
 -(void)override_setDelegate:(id<CLLocationManagerDelegate>)delegate {
-  [[CELocationEnhancements instance] addLocationManager:self];
+  [[CELocationEnhancements instance] addManager:self];
   [self override_setDelegate:delegate];
 }
 

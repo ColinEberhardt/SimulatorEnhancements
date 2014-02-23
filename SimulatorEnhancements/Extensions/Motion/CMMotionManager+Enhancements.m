@@ -24,7 +24,7 @@
 
   objc_setAssociatedObject(self, HANDLER_IDENTIFIER, handler, OBJC_ASSOCIATION_RETAIN);
   
-  [[CEMotionEnhancements instance] addMotionManager:self];
+  [[CEMotionEnhancements instance] addManager:self];
 }
 
 

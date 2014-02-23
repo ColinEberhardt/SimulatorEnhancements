@@ -7,15 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreMotion/CoreMotion.h>
+#import "CEBaseManagerEnhancement.h"
 
-@interface CEMotionEnhancements : NSObject
+@interface CEMotionEnhancements : CEBaseManagerEnhancement
 
 - (void)enable;
 
 - (void)receiveSimulatorData:(NSArray *)data;
-
-- (void)addMotionManager:(CMMotionManager *)manager;
 
 + (CEMotionEnhancements *)instance;
 

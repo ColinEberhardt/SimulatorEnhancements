@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7224AD4318B3BA7C006F0138 /* CELocationEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD4218B3BA7C006F0138 /* CELocationEnhancements.m */; };
-		7224AD4918B3BAB7006F0138 /* NSDictionary+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD4818B3BAB7006F0138 /* NSDictionary+Helpers.m */; };
+		7224AD8D18B9DEE4006F0138 /* CEMotionEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD8818B9DEE4006F0138 /* CEMotionEnhancements.m */; };
+		7224AD8E18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD8A18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m */; };
+		7224AD8F18B9DEE4006F0138 /* CMMotionManager+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD8C18B9DEE4006F0138 /* CMMotionManager+Enhancements.m */; };
+		7224AD9218B9DEEE006F0138 /* CEBaseManagerEnhancement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD9118B9DEEE006F0138 /* CEBaseManagerEnhancement.m */; };
+		7224AD9818B9DEF6006F0138 /* CESwizzleUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD9518B9DEF6006F0138 /* CESwizzleUtils.m */; };
+		7224AD9918B9DEF6006F0138 /* NSDictionary+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD9718B9DEF6006F0138 /* NSDictionary+Helpers.m */; };
 		729EC01F18B14E3900BBED63 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729EC01E18B14E3900BBED63 /* Foundation.framework */; };
 		729EC02118B14E3900BBED63 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729EC02018B14E3900BBED63 /* CoreGraphics.framework */; };
 		729EC02318B14E3900BBED63 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729EC02218B14E3900BBED63 /* UIKit.framework */; };
@@ -41,8 +46,18 @@
 /* Begin PBXFileReference section */
 		7224AD4118B3BA7C006F0138 /* CELocationEnhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CELocationEnhancements.h; path = Extensions/Location/CELocationEnhancements.h; sourceTree = "<group>"; };
 		7224AD4218B3BA7C006F0138 /* CELocationEnhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CELocationEnhancements.m; path = Extensions/Location/CELocationEnhancements.m; sourceTree = "<group>"; };
-		7224AD4718B3BAB7006F0138 /* NSDictionary+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Helpers.h"; path = "Extensions/NSDictionary+Helpers.h"; sourceTree = "<group>"; };
-		7224AD4818B3BAB7006F0138 /* NSDictionary+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Helpers.m"; path = "Extensions/NSDictionary+Helpers.m"; sourceTree = "<group>"; };
+		7224AD8718B9DEE4006F0138 /* CEMotionEnhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEMotionEnhancements.h; sourceTree = "<group>"; };
+		7224AD8818B9DEE4006F0138 /* CEMotionEnhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEMotionEnhancements.m; sourceTree = "<group>"; };
+		7224AD8918B9DEE4006F0138 /* CMAccelerometerData+Enhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMAccelerometerData+Enhancements.h"; sourceTree = "<group>"; };
+		7224AD8A18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMAccelerometerData+Enhancements.m"; sourceTree = "<group>"; };
+		7224AD8B18B9DEE4006F0138 /* CMMotionManager+Enhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMMotionManager+Enhancements.h"; sourceTree = "<group>"; };
+		7224AD8C18B9DEE4006F0138 /* CMMotionManager+Enhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMMotionManager+Enhancements.m"; sourceTree = "<group>"; };
+		7224AD9018B9DEEE006F0138 /* CEBaseManagerEnhancement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CEBaseManagerEnhancement.h; path = Extensions/CEBaseManagerEnhancement.h; sourceTree = "<group>"; };
+		7224AD9118B9DEEE006F0138 /* CEBaseManagerEnhancement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CEBaseManagerEnhancement.m; path = Extensions/CEBaseManagerEnhancement.m; sourceTree = "<group>"; };
+		7224AD9418B9DEF6006F0138 /* CESwizzleUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CESwizzleUtils.h; sourceTree = "<group>"; };
+		7224AD9518B9DEF6006F0138 /* CESwizzleUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CESwizzleUtils.m; sourceTree = "<group>"; };
+		7224AD9618B9DEF6006F0138 /* NSDictionary+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Helpers.h"; sourceTree = "<group>"; };
+		7224AD9718B9DEF6006F0138 /* NSDictionary+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Helpers.m"; sourceTree = "<group>"; };
 		729EC01B18B14E3900BBED63 /* SimulatorEnhancements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorEnhancements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729EC01E18B14E3900BBED63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		729EC02018B14E3900BBED63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +109,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7224AD8618B9DEE4006F0138 /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				7224AD8718B9DEE4006F0138 /* CEMotionEnhancements.h */,
+				7224AD8818B9DEE4006F0138 /* CEMotionEnhancements.m */,
+				7224AD8918B9DEE4006F0138 /* CMAccelerometerData+Enhancements.h */,
+				7224AD8A18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m */,
+				7224AD8B18B9DEE4006F0138 /* CMMotionManager+Enhancements.h */,
+				7224AD8C18B9DEE4006F0138 /* CMMotionManager+Enhancements.m */,
+			);
+			name = Motion;
+			path = Extensions/Motion;
+			sourceTree = "<group>";
+		};
+		7224AD9318B9DEF6006F0138 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7224AD9418B9DEF6006F0138 /* CESwizzleUtils.h */,
+				7224AD9518B9DEF6006F0138 /* CESwizzleUtils.m */,
+				7224AD9618B9DEF6006F0138 /* NSDictionary+Helpers.h */,
+				7224AD9718B9DEF6006F0138 /* NSDictionary+Helpers.m */,
+			);
+			name = Util;
+			path = Extensions/Util;
+			sourceTree = "<group>";
+		};
 		729EC01218B14E3900BBED63 = {
 			isa = PBXGroup;
 			children = (
@@ -172,9 +213,11 @@
 		729EC05718B14F0500BBED63 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7224AD4718B3BAB7006F0138 /* NSDictionary+Helpers.h */,
-				7224AD4818B3BAB7006F0138 /* NSDictionary+Helpers.m */,
+				7224AD8618B9DEE4006F0138 /* Motion */,
 				729EC05818B14F0A00BBED63 /* Location */,
+				7224AD9318B9DEF6006F0138 /* Util */,
+				7224AD9018B9DEEE006F0138 /* CEBaseManagerEnhancement.h */,
+				7224AD9118B9DEEE006F0138 /* CEBaseManagerEnhancement.m */,
 				729EC05918B14F6100BBED63 /* CESimulatorEnhancements.h */,
 				729EC05A18B14F6100BBED63 /* CESimulatorEnhancements.m */,
 			);
@@ -291,11 +334,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				729EC02F18B14E3900BBED63 /* CEAppDelegate.m in Sources */,
+				7224AD8F18B9DEE4006F0138 /* CMMotionManager+Enhancements.m in Sources */,
 				729EC05B18B14F6100BBED63 /* CESimulatorEnhancements.m in Sources */,
 				729EC06118B1514100BBED63 /* CLLocationManager+Enhancements.m in Sources */,
+				7224AD9818B9DEF6006F0138 /* CESwizzleUtils.m in Sources */,
 				729EC02B18B14E3900BBED63 /* main.m in Sources */,
+				7224AD9918B9DEF6006F0138 /* NSDictionary+Helpers.m in Sources */,
+				7224AD9218B9DEEE006F0138 /* CEBaseManagerEnhancement.m in Sources */,
 				729EC03518B14E3900BBED63 /* CEViewController.m in Sources */,
-				7224AD4918B3BAB7006F0138 /* NSDictionary+Helpers.m in Sources */,
+				7224AD8D18B9DEE4006F0138 /* CEMotionEnhancements.m in Sources */,
+				7224AD8E18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m in Sources */,
 				7224AD4318B3BA7C006F0138 /* CELocationEnhancements.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

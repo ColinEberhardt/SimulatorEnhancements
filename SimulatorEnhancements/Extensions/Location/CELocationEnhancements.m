@@ -13,6 +13,10 @@
 #import "NSDictionary+Helpers.h"
 #import "CESwizzleUtils.h"
 
+@interface CELocationEnhancements ()
+
+@end
+
 @implementation CELocationEnhancements {
   NSMutableArray *_locationManagers;
 }
@@ -32,14 +36,12 @@
     [locations addObject:location];
   }
   
-  for (CLLocationManager *locationManager in _locationManagers) {
+
+  for (CLLocationManager *locationManager in [self getManagers]) {
     [locationManager simx_didUpdateLocations:locations];
   }
 }
 
-- (void)addLocationManager:(CLLocationManager *)manager {
-  [_locationManagers addObject:manager];
-}
 
 + (CELocationEnhancements *)instance {
   static CELocationEnhancements *instance = nil;

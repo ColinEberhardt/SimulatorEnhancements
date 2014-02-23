@@ -7,16 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CEBaseManagerEnhancement.h"
 
-@class CLLocationManager;
-
-@interface CELocationEnhancements : NSObject
+@interface CELocationEnhancements : CEBaseManagerEnhancement
 
 - (void)enable;
 
 - (void)receiveSimulatorData:(NSArray *)data;
-
-- (void)addLocationManager:(CLLocationManager *)manager;
 
 + (CELocationEnhancements *)instance;
 
