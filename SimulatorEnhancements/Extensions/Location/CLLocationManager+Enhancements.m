@@ -21,15 +21,15 @@
   [self override_setDelegate:delegate];
 }
 
-- (void)simx_didUpdateLocations:(NSArray *)locations {
+- (void)simx_didUpdateLocation:(CLLocation *)location {
   id delegate = self.delegate;
   
   if ([delegate respondsToSelector:@selector(locationManager:didUpdateLocations:)]) {
-    [delegate locationManager:self didUpdateLocations:locations];
+    [delegate locationManager:self didUpdateLocations:@[location]];
   }
   
   if ([delegate respondsToSelector:@selector(locationManager:didUpdateToLocation:fromLocation:)]) {
-    [delegate locationManager:self didUpdateToLocation:locations.lastObject fromLocation:nil];
+    [delegate locationManager:self didUpdateToLocation:location fromLocation:nil];
   }
 }
 

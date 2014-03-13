@@ -15,7 +15,7 @@
   NSString* value = (NSString*)[self objectForKey:key];
   if (value)
   {
-    return [NSNumber numberWithInt:[value integerValue]];
+    return [NSNumber numberWithDouble:[value doubleValue]];
   }
   else
   {

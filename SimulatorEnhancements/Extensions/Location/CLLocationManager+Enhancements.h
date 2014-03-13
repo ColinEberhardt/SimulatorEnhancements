@@ -17,6 +17,6 @@
 /**
  Send the didUpdateLocations: message to the delegate
  */
-- (void)simx_didUpdateLocations:(NSArray *)locations;
+- (void)simx_didUpdateLocation:(CLLocation *)locations;
 
 @end

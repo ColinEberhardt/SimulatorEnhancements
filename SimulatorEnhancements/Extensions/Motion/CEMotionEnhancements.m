@@ -12,9 +12,7 @@
 #import "NSDictionary+Helpers.h"
 #import "CMAccelerometerData+Enhancements.h"
 
-@implementation CEMotionEnhancements {
-  NSMutableArray *_motionManagers;
-}
+@implementation CEMotionEnhancements
 
 - (void)receiveSimulatorData:(NSDictionary *)jsonData {
   CMAcceleration acc;
@@ -23,9 +21,9 @@
   acc.z = [[jsonData objectForKey:@"z"] doubleValue];
   
   CMAccelerometerData *data = [[CMAccelerometerData alloc] init];
-  [data dummySetAcceleration:acc];
+  [data simx_setAcceleration:acc];
   
-  for (CMMotionManager *motionManager in _motionManagers) {
+  for (CMMotionManager *motionManager in [self getManagers]) {
     [motionManager simx_accelerometerUpdate:data];
   }
 }
@@ -36,10 +34,6 @@
   
   [CESwizzleUtils swizzleClass:[CMAccelerometerData class]
                         method:@"acceleration"];
-}
-
-- (void)addMotionManager:(CMMotionManager *)manager {
-  [_motionManagers addObject:manager];
 }
 
 + (CEMotionEnhancements *)instance {

@@ -27,5 +27,4 @@
   [[CEMotionEnhancements instance] addManager:self];
 }
 
-
 @end

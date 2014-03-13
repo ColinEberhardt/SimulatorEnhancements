@@ -14,31 +14,23 @@
 #import "CESwizzleUtils.h"
 
 @interface CELocationEnhancements ()
-
 @end
 
-@implementation CELocationEnhancements {
-  NSMutableArray *_locationManagers;
-}
+@implementation CELocationEnhancements
 
 - (void)enable {
   [CESwizzleUtils swizzleClass:[CLLocationManager class] method:@"setDelegate:"];
   [CESwizzleUtils swizzleClass:[CLLocationManager class] method:@"onClientEventLocation:"];
 }
 
-- (void)receiveSimulatorData:(NSArray *)data {
-  NSMutableArray *locations = [NSMutableArray new];
-  
-  for (NSDictionary *locationData in data) {
-    double lat = [[locationData NSNumberForKey:@"latitude"] doubleValue];
-    double lon = [[locationData NSNumberForKey:@"longitude"] doubleValue];
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
-    [locations addObject:location];
-  }
-  
+- (void)receiveSimulatorData:(NSDictionary *)locationData {
+
+  double lat = [[locationData NSNumberForKey:@"latitude"] doubleValue];
+  double lon = [[locationData NSNumberForKey:@"longitude"] doubleValue];
+  CLLocation *location = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
 
   for (CLLocationManager *locationManager in [self getManagers]) {
-    [locationManager simx_didUpdateLocations:locations];
+    [locationManager simx_didUpdateLocation:location];
   }
 }
 

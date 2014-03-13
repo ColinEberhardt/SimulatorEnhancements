@@ -27,8 +27,8 @@
                                                        options:kNilOptions
                                                          error:&error];
   
-  if ([json objectForKey:@"locations"]) {
-    [[CELocationEnhancements instance] receiveSimulatorData:json[@"locations"]];
+  if ([json objectForKey:@"location"]) {
+    [[CELocationEnhancements instance] receiveSimulatorData:json[@"location"]];
   }
   if ([json objectForKey:@"accelerometer"]) {
     [[CEMotionEnhancements instance] receiveSimulatorData:json[@"accelerometer"]];
@@ -47,7 +47,7 @@
 #pragma mark - client code
 
 - (void)startClient {
-  _timer = [NSTimer scheduledTimerWithTimeInterval:0.1
+  _timer = [NSTimer scheduledTimerWithTimeInterval:0.05
                                             target:self
                                           selector:@selector(tick)
                                           userInfo:nil

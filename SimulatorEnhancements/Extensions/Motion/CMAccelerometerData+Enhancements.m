@@ -11,33 +11,17 @@
 
 #define ACCELERATION_IDENTIFIER @"accelerometerHandler"
 
-@interface AccData : NSObject 
-
-@property double x;
-@property double y;
-@property double z;
-
-@end
-
-@implementation AccData
-@end
-
 @implementation CMAccelerometerData (Enhancements)
 
-- (void) dummySetAcceleration:(CMAcceleration)acceleration {
-  AccData *accData = [AccData new];
-  accData.x = acceleration.x;
-  accData.y = acceleration.y;
-  accData.z = acceleration.z;
-  objc_setAssociatedObject(self, ACCELERATION_IDENTIFIER, accData, OBJC_ASSOCIATION_RETAIN);
+- (void) simx_setAcceleration:(CMAcceleration)acceleration {
+  NSValue *value = [NSValue value:&acceleration withObjCType:@encode(CMAcceleration)];
+  objc_setAssociatedObject(self, ACCELERATION_IDENTIFIER, value, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (CMAcceleration)override_acceleration {
-  AccData *value = objc_getAssociatedObject(self, ACCELERATION_IDENTIFIER);
+  NSValue *value = objc_getAssociatedObject(self, ACCELERATION_IDENTIFIER);
   CMAcceleration acc;
-  acc.x = value.x;
-  acc.y = value.y;
-  acc.z = value.z;
+  [value getValue:&acc];
   return acc;
 }
 

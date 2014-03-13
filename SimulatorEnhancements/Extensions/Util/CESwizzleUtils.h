@@ -10,6 +10,9 @@
 
 @interface CESwizzleUtils : NSObject
 
+/**
+ Swizzle the given method so that it is replaced with a method named 'override_methodName'.
+ */
 + (void)swizzleClass:(Class)class method:(NSString*)methodName;
 
 @end
