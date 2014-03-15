@@ -14,7 +14,7 @@ To use this code, add the contents of the `SimulatorEnhancements` into your proj
     
 Once this is done, the app will poll `localhost/data` requesting the current, simulated, location and accelerometer data.
 
-To simulate this data, use the SimulatorEnhancements-Server project, which is a simple we server that provides data in the following format:
+To simulate this data, use the [SimulatorEnhancements-Server](https://github.com/ColinEberhardt/SimulatorEnhancements-Server) project, which is a simple web server that provides data in the following format:
 
 	{
 	  accelerometer: { x: 0.56, y: 0.0, z: 0.45 },
