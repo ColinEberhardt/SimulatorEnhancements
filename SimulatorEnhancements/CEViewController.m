@@ -15,22 +15,11 @@
 @end
 
 @implementation CEViewController {
-  CLLocationManager *_locationManager;
 }
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  
-  _locationManager = [CLLocationManager new];
-  _locationManager.delegate = self;
-  [_locationManager startUpdatingLocation];
-  
-}
-
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-  
 }
 
 @end
